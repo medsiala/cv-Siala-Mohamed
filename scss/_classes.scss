@@ -1,0 +1,22 @@
+.title {
+  &-small {
+    letter-spacing: 0.5rem;
+    font-size: 1.7rem;
+  }
+  &-italique {
+    font-style: italic;
+  }
+  &-ligne {
+    text-decoration: underline;
+    padding-top: 2rem;
+  }
+}
+
+.text {
+  &-primary {
+    color: var(--primary);
+  }
+  &-hint {
+    color: var(--hint);
+  }
+}

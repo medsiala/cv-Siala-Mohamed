@@ -1,0 +1,3 @@
+@function skills($size) {
+  @return calc(#{$size} - 5px);
+}
