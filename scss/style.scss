@@ -12,7 +12,15 @@
     "aside main" 1fr
     "footer footer"
     / 350px auto;
-  min-height: 100vh;
+  // min-height: 100vh;
+  @include xs {
+    grid:
+      " header" auto
+      "main" auto
+      "picture" auto
+      "aside" auto
+      "footer " auto/auto;
+  }
 }
 header {
   grid-area: header;
@@ -24,11 +32,17 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include xs {
+    padding: 5rem 2rem;
+  }
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 4rem;
     font-weight: 300;
     letter-spacing: 2rem;
+    @include xs {
+      font-size: 4rem;
+    }
     span {
       display: inline-block;
       animation: bounce 2s;
@@ -46,9 +60,17 @@ header {
   display: grid;
   justify-items: center;
   align-items: center;
+  @include xs {
+    padding: 0rem 4rem;
+    margin: 0;
+  }
 
   img {
     border-radius: 50%;
+    @include xs {
+      border: 1px solid #eee;
+      max-width: 30%;
+    }
   }
 }
 aside {
@@ -56,7 +78,10 @@ aside {
   background: var(--background);
   border-right: 1px solid #ddd;
   padding: 5rem;
-  min-height: 1500px;
+  // min-height: 1500px;
+  @include xs {
+    padding: 2rem;
+  }
   .bloc {
     margin-bottom: 5rem;
     h3 {
@@ -140,21 +165,39 @@ aside {
 main {
   grid-area: main;
   padding: 5rem;
+  @include xs {
+    padding: 2rem 1.5rem;
+  }
   h2 {
     margin-bottom: 2rem;
+    @include xs {
+      letter-spacing: 0.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
   }
   p {
     letter-spacing: 0.2rem;
     line-height: 3rem;
+    @include xs {
+      letter-spacing: 0.1rem;
+    }
   }
   .experience {
     display: flex;
+    margin: 2rem;
+    @include xs {
+      margin: 0.5rem;
+    }
     .timeline {
       width: 67px;
       text-align: center;
       color: var(--hint);
       padding-right: 2rem;
       border-right: 1px solid var(--border);
+      @include xs {
+        width: 50px;
+      }
       p {
         margin: 0;
       }
@@ -171,6 +214,8 @@ main {
         margin: 2rem 0;
         list-style: circle;
         padding-left: 4rem;
+        @include xs {
+        }
         li {
           padding-bottom: 0.5rem;
         }
@@ -195,8 +240,14 @@ footer {
   text-align: center;
   justify-content: center;
   align-items: center;
+  @include xs {
+    padding: 1.5rem;
+  }
   h2 {
     margin-bottom: 3rem;
+    @include xs {
+      margin: 0.5rem 0;
+    }
   }
   form {
     display: flex;
@@ -224,7 +275,7 @@ footer {
       background: linear-gradient(to right, var(--dark), var(--light));
       padding: 1rem 2rem;
       color: white;
-      font-size: 2rem;
+      font-size: 1.7rem;
       border-top-right-radius: 20%;
       border-bottom-right-radius: 20%;
     }
@@ -236,7 +287,9 @@ footer {
       padding: 1rem 2rem;
       border: 0;
       line-height: 2rem;
-
+      @include xs {
+        min-width: 200px;
+      }
       &::placeholder {
         color: var(--text);
       }
