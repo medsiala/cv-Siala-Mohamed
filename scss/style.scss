@@ -286,6 +286,7 @@ footer {
       min-width: 400px;
       padding: 1rem 2rem;
       border: 0;
+      border-radius: 0;
       line-height: 2rem;
       @include xs {
         min-width: 200px;
