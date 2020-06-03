@@ -50,6 +50,7 @@ header {
   }
   p {
     letter-spacing: 0.5rem;
+    font-size: 2rem;
   }
 }
 .picture {
@@ -245,8 +246,36 @@ footer {
   }
   h2 {
     margin-bottom: 3rem;
+    color: white;
+    span {
+      font-size: 2.5rem;
+      display: inline-block;
+      animation: wheelHueColor 4s infinite;
+      @keyframes wheelHueColor {
+        from,
+        to {
+          color: white;
+        }
+
+        50% {
+          color: hsl(216, 60%, 45%);
+        }
+
+        90% {
+          color: white;
+        }
+      }
+    }
     @include xs {
       margin: 0.5rem 0;
+    }
+  }
+  div {
+    a {
+      i {
+        color: white;
+        font-size: 4rem;
+      }
     }
   }
   form {

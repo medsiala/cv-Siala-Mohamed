@@ -103,7 +103,8 @@ header {
       display: inline-block;
       animation: bounce 2s; }
   header p {
-    letter-spacing: 0.5rem; }
+    letter-spacing: 0.5rem;
+    font-size: 2rem; }
 
 .picture {
   grid-area: picture;
@@ -260,10 +261,27 @@ footer {
     footer {
       padding: 1.5rem; } }
   footer h2 {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    color: white; }
+    footer h2 span {
+      font-size: 2.5rem;
+      display: inline-block;
+      animation: wheelHueColor 4s infinite; }
+
+@keyframes wheelHueColor {
+  from,
+  to {
+    color: white; }
+  50% {
+    color: #2e65b8; }
+  90% {
+    color: white; } }
     @media (max-width: 480px) {
       footer h2 {
         margin: 0.5rem 0; } }
+  footer div a i {
+    color: white;
+    font-size: 4rem; }
   footer form {
     display: flex;
     align-items: center; }
