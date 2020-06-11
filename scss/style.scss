@@ -55,7 +55,7 @@ header {
 }
 .picture {
   grid-area: picture;
-  padding: 1rem 4rem;
+  padding: 0;
   background-color: var(--background);
   border-right: 1px solid #ddd;
   display: grid;
@@ -67,10 +67,14 @@ header {
   }
 
   img {
+    width: auto;
+    height: 80%;
     border-radius: 50%;
     @include xs {
       border: 1px solid #eee;
       max-width: 30%;
+      width: auto;
+      height: auto;
     }
   }
 }
@@ -186,7 +190,7 @@ main {
   }
   .experience {
     display: flex;
-    margin: 2rem;
+    margin: 4rem;
     @include xs {
       margin: 0.5rem;
     }

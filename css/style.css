@@ -34,7 +34,8 @@ img {
 
 .title-small {
   letter-spacing: 0.5rem;
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  margin: 2rem; }
 
 .title-italique {
   font-style: italic; }
@@ -108,7 +109,7 @@ header {
 
 .picture {
   grid-area: picture;
-  padding: 1rem 4rem;
+  padding: 0;
   background-color: var(--background);
   border-right: 1px solid #ddd;
   display: grid;
@@ -119,11 +120,15 @@ header {
       padding: 0rem 4rem;
       margin: 0; } }
   .picture img {
+    width: auto;
+    height: 80%;
     border-radius: 50%; }
     @media (max-width: 480px) {
       .picture img {
         border: 1px solid #eee;
-        max-width: 30%; } }
+        max-width: 30%;
+        width: auto;
+        height: auto; } }
 
 aside {
   grid-area: aside;
@@ -214,7 +219,7 @@ main {
         letter-spacing: 0.1rem; } }
   main .experience {
     display: flex;
-    margin: 2rem; }
+    margin: 4rem; }
     @media (max-width: 480px) {
       main .experience {
         margin: 0.5rem; } }
