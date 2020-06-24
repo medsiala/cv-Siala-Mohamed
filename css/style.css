@@ -121,7 +121,7 @@ header {
       margin: 0; } }
   .picture img {
     width: auto;
-    height: 80%;
+    height: 60%;
     border-radius: 50%; }
     @media (max-width: 480px) {
       .picture img {
@@ -249,6 +249,9 @@ main {
       main .experience .content .pl-2 {
         padding-left: 2rem;
         list-style: square; }
+        main .experience .content .pl-2 .video {
+          display: flex;
+          justify-content: center; }
       main .experience .content span {
         font-weight: 700; }
 
